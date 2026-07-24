@@ -58,32 +58,25 @@ Only placeholder `.env.example` files are included in the submitted repository.
 
 ## 2. Submitted project structure
 
-```text
-web01-ops/
-├── health-check.sh
-├── backup.sh
-├── restore-test.sh
-├── cron/
-│   └── web01-ops.cron
-├── examples/
-│   ├── monitoring.env.example
-│   └── backup.env.example
-├── evidence/
-│   ├── 01-task1-healthy-run.jpg
-│   ├── 02-task1-triggered-alert.jpg
-│   ├── 03-task2-backup-success.jpg
-│   ├── 04-task2-archive-contents.jpg
-│   ├── 05-task2-rotation.jpg
-│   ├── 06-task2-restore-test.jpg
-│   ├── 07-task2-backup-failure.jpg
-│   ├── 08-task3-error-trap.jpg
-│   ├── 09-task3-shellcheck.jpg
-│   ├── 10-task4-cron-schedule.jpg
-│   └── 11-task4-cron-log.jpg
-├── README.md
-├── REPORT.md
-└── .gitignore
 ```
+web01-ops/
+├── health-check.sh              # Health monitoring script
+├── backup.sh                    # Automated backup with rotation
+├── restore-test.sh              # Restore verification script
+├── cron/
+│   └── web01-ops.cron          # Cron schedule configuration
+├── examples/
+│   ├── monitoring.env.example  # Health-check config template
+│   └── backup.env.example      # Backup config template
+├── README.md                    # Setup and usage guide
+├── REPORT.md                    # This report (with image references)
+├── REPORT.pdf                   # PDF version with embedded images
+└── .gitignore                   # Git exclusions for sensitive files
+```
+
+> **Note:** All screenshot evidence is embedded in `REPORT.pdf`. The `evidence/` folder was removed after PDF generation to reduce repository size. Image references in `REPORT.md` point to the original evidence files used during testing.
+
+**Repository:** https://github.com/thangak18/web01-ops
 
 All Bash scripts begin with:
 
@@ -898,9 +891,11 @@ The project was maintained in a Git repository with separate commits for major i
 
 Repository: **https://github.com/thangak18/web01-ops**
 
-Commit history:
+Final commit history:
 
-```text
+```
+ee89724 Add REPORT.pdf and remove evidence images
+c3d8450 Add GitHub repository link
 e76e973 Add acceptance evidence and final report
 752e660 Add cron automation
 5d2826b Add gitignore for sensitive configs
@@ -908,6 +903,8 @@ ab5e6a0 Add restore verification
 c003751 Add verified rotating backup
 4ecbea5 Implement host health monitoring
 ```
+
+Eight commits document the progression from basic health monitoring to the complete automated operations toolkit.
 
 ---
 

@@ -4,6 +4,12 @@
 
 This project implements the four homework tasks: health monitoring, verified rotating backups, precise error trapping, and cron scheduling.
 
+## Evidence and screenshots
+
+All acceptance-test screenshots are embedded in **`REPORT.pdf`**. The original `evidence/` folder containing the JPG images was removed after PDF generation to reduce repository size. For grading, please refer to the PDF version of the report which contains all visual evidence.
+
+---
+
 ## 1. Prepare the Linux VM
 
 ```bash
