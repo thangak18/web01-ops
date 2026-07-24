@@ -1,0 +1,11 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Install this project at /opt/web01-ops before using this cron.d file.
+# Health check every 5 minutes.
+*/5 * * * * root /bin/bash -c 'echo "$(/bin/date -Is) health-check start"; /opt/web01-ops/health-check.sh; rc=$?; echo "$(/bin/date -Is) health-check exit=$rc"; exit 0' >> /var/log/web01-health.log 2>&1
+
+# Backup every day at 02:00.
+0 2 * * * root /bin/bash -c 'echo "$(/bin/date -Is) backup start"; /opt/web01-ops/backup.sh; rc=$?; echo "$(/bin/date -Is) backup exit=$rc"; exit 0' >> /var/log/web01-backup.log 2>&1
+
+# Grading demo only: temporarily replace */5 above with */1, then restore */5.
