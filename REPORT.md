@@ -896,22 +896,17 @@ The real `.env` files are not committed to Git. Only `.env.example` files with p
 
 The project was maintained in a Git repository with separate commits for major implementation stages.
 
-Example commit history:
+Repository: **https://github.com/thangak18/web01-ops**
+
+Commit history:
 
 ```text
-(Git repository not initialized - this is a deliverable archive)
-```
-
-Suggested logical commit sequence:
-
-```text
-Implement host health monitoring
-Add verified rotating backup
-Add restore verification
-Add ERR trap and failure reporting
-Fix ShellCheck warnings
-Add cron automation
-Add acceptance evidence and final report
+e76e973 Add acceptance evidence and final report
+752e660 Add cron automation
+5d2826b Add gitignore for sensitive configs
+ab5e6a0 Add restore verification
+c003751 Add verified rotating backup
+4ecbea5 Implement host health monitoring
 ```
 
 ---
